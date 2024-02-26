@@ -1,0 +1,37 @@
+* {
+    text-align: center;
+    color: blue;
+}
+
+body {
+    background-color: lightblue;
+}
+
+/* SElEctor */
+/* h1 {
+    color: white;
+    text-align: center;
+} */
+/* 
+p{
+    font-family: verdana;
+    font-size: 20px;
+} */
+
+/* Id Selector */
+#para1 {
+    color: red;
+}
+#head1 {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+/* Class Selector */
+p.center{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+p.large{
+    font-size: 300%;
+}

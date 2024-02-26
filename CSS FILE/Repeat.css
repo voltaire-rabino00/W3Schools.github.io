@@ -1,0 +1,13 @@
+
+body {
+    /* background-image: url(/IMAGE/img_tree-png.png); */
+     background: #ffff 
+     url(/IMAGE/img_tree-png.png)
+     no-repeat
+     right top;    /*Css Shorthand */
+    /* background-repeat: no-repeat; */
+    /* background-position: right top; */
+    margin-right: 200px;
+    /* background-attachment: fixed;  background attachment */
+     /* background-attachment: scroll;  bg scroll  */
+}

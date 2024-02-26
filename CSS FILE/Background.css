@@ -1,0 +1,22 @@
+/* Background Color */
+body{
+    background-color: lightblue;
+    /* background-image: url(/IMAGE/paper.jpg); */
+    background-image: url(/IMAGE/purplebg.jpg);
+    background-size: cover;
+}
+
+Opacity
+div {
+    background-color: green;
+}
+
+.first{
+    opacity: 0.1;
+}
+.second {
+    opacity: 0.3;
+}
+.third {
+    opacity: 0.6;
+}
