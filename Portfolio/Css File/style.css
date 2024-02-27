@@ -1,25 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+
+* {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+/* Styling the body */
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #e6f7ff; /* Example background color */
 }
 
-header {
-   background-color: #FAEBD7;
-
-}
-
-h1.name{
-    font-size: 50px;
-}
-
-ul {
+/* Styling the navigation */
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -27,11 +22,11 @@ ul {
     background-color: #333333;
 }
 
-li {
+nav ul li {
     float: right;
 }
 
-li a{
+nav ul li a {
     display: block;
     color: white;
     text-align: center;
@@ -39,7 +34,179 @@ li a{
     text-decoration: none;
 }
 
-li a:hover{
+nav ul li a:hover {
     background-color: #111111;
 }
-  
+
+/* Styling the profile section */
+.profile {
+    position: relative;
+    text-align: left;
+    padding: 20px; /* Adjust as needed */
+}
+
+.profile img {
+    width: 200px; 
+    height: auto; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    z-index: 1;
+}
+
+
+.name {
+    font-size: 50px; 
+    color: #333; 
+    margin-top: 10px; 
+    z-index: 2;
+    background: linear-gradient(45deg, #FFC107, #FF5722);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow 5s infinite alternate;
+}
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+
+.description {
+    font-size: 18px; 
+    color: #666; 
+   margin-top: 10px; 
+   background: linear-gradient(45deg, #00FFFF, #FF00FF);
+   -webkit-background-clip: text; 
+   background-clip: text;
+   animation: colorChange 5s infinite alternate;
+}
+@keyframes colorChange {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Media query for responsive design */
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        float: none;
+        display: inline-block;
+    }
+    
+    nav ul {
+        text-align: center;
+    }
+    
+    .profile img {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        top: auto;
+        right: auto;
+        width: 50%; 
+        margin-top: 20px; 
+    }
+    
+    .name {
+        text-align: center;
+    }
+    
+    .description {
+        text-align: center;
+    }
+}
+
+
+/* Styling the section 2 */
+#Experience {
+    text-align: center;
+}
+
+/* Styling the heading */
+#Experience h1 {
+    font-size: 36px; 
+    margin-bottom: 20px;
+}
+
+/* Define keyframes for the heading animation */
+@keyframes slideIn {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Apply the animation to the heading */
+#Experience h1 {
+    font-size: 36px; 
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease-in-out forwards; 
+}
+/* Styling the paragraph with class "descProg" */
+.descProg {
+    font-size: 18px;
+    margin-bottom: 20px; 
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+.progDesc {
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-in-out forwards; 
+}
+
+
+.logo-container {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; 
+}
+
+
+.logo,
+.logo2 {
+    flex: 1; 
+}
+
+
+
+.logo img,
+.logo2 img {
+    width: 150px; 
+    height: auto; 
+    border: 2px solid transparent; 
+    padding: 10px; 
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styling the description paragraphs */
+.progDesc,
+.progDesc2 {
+    font-size: 14px; 
+    margin-top: 5px; 
+    margin-bottom: 20px;
+    margin-left: 4px;
+}
+
+
+.logo img:hover,
+.logo2 img:hover {
+    border-color: #FF5722;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    animation: pulsate 1s infinite !important; 
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
