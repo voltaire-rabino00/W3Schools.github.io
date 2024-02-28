@@ -14,6 +14,14 @@ body {
 }
 
 /* Styling the navigation */
+nav {
+    position: fixed; /* Position the navigation bar */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Occupy the full width of the viewport */
+    z-index: 1000; /* Ensure it appears above other content */
+    background-color: #333333;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
