@@ -46,7 +46,7 @@ nav ul li a:hover {
 }
 
 .profile img {
-    width: 200px; 
+    width: 250px; 
     height: auto; 
     border-radius: 50%; 
     position: absolute;
@@ -74,14 +74,18 @@ nav ul li a:hover {
 
 
 .description {
-    font-size: 18px; 
-    color: #666; 
-   margin-top: 10px; 
-   background: linear-gradient(45deg, #00FFFF, #FF00FF);
-   -webkit-background-clip: text; 
-   background-clip: text;
-   animation: colorChange 5s infinite alternate;
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    background: linear-gradient(45deg, #00FFFF, #FF00FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: colorChange 5s infinite alternate;
+    max-width: calc(100% - 220px); /* Adjust as needed based on image width */
+    margin-right: 220px; /* Adjust as needed based on image width */
+    padding-right: 20px; /* Add padding to separate text from the image */
 }
+
 @keyframes colorChange {
     0% { filter: hue-rotate(0deg); }
     100% { filter: hue-rotate(360deg); }
@@ -187,11 +191,18 @@ nav ul li a:hover {
 
 /* Styling the description paragraphs */
 .progDesc,
-.progDesc2 {
+.progDesc2,
+.progDesc3 {
+    padding: 20px;
     font-size: 14px; 
     margin-top: 5px; 
     margin-bottom: 20px;
-    margin-left: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px; /* Adjust as needed */
+    text-align: center;
+    border: 2px solid #333; /* Example border */
+    border-radius: 10px; /* Example border radius */
 }
 
 
@@ -208,5 +219,29 @@ nav ul li a:hover {
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+
+.logo3 img {
+    width: 150px;
+    height: auto;
+    border: 2px solid transparent; 
+    padding: 10px; 
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.logo3 img:hover {
+    border-color: #FF5722;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    animation: pulsate 1s infinite !important; 
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
 
 
