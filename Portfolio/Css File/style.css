@@ -81,9 +81,11 @@ nav ul li a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     animation: colorChange 5s infinite alternate;
-    max-width: calc(100% - 220px); /* Adjust as needed based on image width */
-    margin-right: 220px; /* Adjust as needed based on image width */
-    padding-right: 20px; /* Add padding to separate text from the image */
+    max-width: calc(100% - 220px); 
+    margin-right: 220px; 
+    padding-right: 20px; 
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 @keyframes colorChange {
@@ -131,30 +133,40 @@ nav ul li a:hover {
 #Experience h1 {
     font-size: 36px; 
     margin-bottom: 20px;
+    color: #FF5733; /* Change the color to a vibrant shade */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    animation: slideIn 0.5s ease-in-out forwards, colorChange 5s infinite alternate; /* Apply animation for sliding in and color changing */
 }
 
-/* Define keyframes for the heading animation */
-@keyframes slideIn {
-    0% { transform: translateY(-20px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+/* Define keyframes for the color change animation */
+@keyframes colorChange {
+    0% { color: #FF5733; } /* Start color */
+    50% { color: #FFC300; } /* Middle color */
+    100% { color: #FF5733; } /* End color */
 }
 
-/* Apply the animation to the heading */
-#Experience h1 {
-    font-size: 36px; 
-    margin-bottom: 20px;
-    animation: slideIn 0.5s ease-in-out forwards; 
-}
 /* Styling the paragraph with class "descProg" */
 .descProg {
     font-size: 18px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    color: #333; /* Text color */
+    font-weight: bold; /* Add bold font weight */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Add letter spacing */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeInUp 0.5s ease-in-out forwards; /* Apply the animation */
 }
 
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+        transform: translateY(20px); /* Start 20px below its final position */
+    }
+    100% {
+        opacity: 1; /* End with full opacity */
+        transform: translateY(0); /* End at its final position */
+    }
 }
 
 
@@ -162,7 +174,10 @@ nav ul li a:hover {
     opacity: 0; 
     animation: fadeIn 0.5s ease-in-out forwards; 
 }
-
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
 .logo-container {
     display: flex;
@@ -199,10 +214,13 @@ nav ul li a:hover {
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 400px; /* Adjust as needed */
+    max-width: 400px;
     text-align: center;
-    border: 2px solid #333; /* Example border */
-    border-radius: 10px; /* Example border radius */
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: #f5f5f5;
 }
 
 
